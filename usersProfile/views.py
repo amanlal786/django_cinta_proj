@@ -45,8 +45,6 @@ def home(request):
 
 def home2(request):
     print("going inn")
-    import pdb
-    pdb.set_trace()
     u=Users(user=request.user)
     if request.method == 'POST':
         form= ProfileForm(request.POST, request.FILES, instance=u)
@@ -60,8 +58,6 @@ def home2(request):
     return render(request,'usersProfile/home2.html', {'form':form})
 
 def edit(request,pk):
-    import pdb
-    pdb.set_trace()
     u=Users(user=request.user)
     
     #taking id from auth user table to match with our users table whose data is to be edited

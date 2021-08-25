@@ -20,8 +20,6 @@ class Users(models.Model):
     is_checkbox2= models.BooleanField('Choose image 2 as profile picture, default profile picture is image 1', default=False)
 
     def save(self, **kwargs):
-        import pdb
-        pdb.set_trace()
         super().save()
         img= Image.open(self.image1.path)
         if img.height > 300 or img.width > 300:
