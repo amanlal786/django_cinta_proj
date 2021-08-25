@@ -13,8 +13,9 @@
   </head>
   <body>
     <h1>Profile</h1>
+    {% if key %}
     <a class="" href="/edit/{{key}}"> Click here to update</a>
-    
+    {% endif %}
     <div class ="container">
       <div class="py-5 text-center bg-secondary text-white">
         <h1 class="mb-3">update and select checkboxes</h1>

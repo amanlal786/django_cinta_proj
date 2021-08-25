@@ -94,6 +94,8 @@ def edit(request,pk):
         edit.save()
         key=request.user.id
         data=Users.objects.all()
+        import pdb
+        pdb.set_trace()
         return render(request,'usersProfile/edit2.html', {'form':form,'data':data, 'key':key})
 
     else:
