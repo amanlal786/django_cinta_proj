@@ -94,7 +94,7 @@ def edit(request,pk):
         edit.save()
         key=request.user.id
         data=Users.objects.all()
-        return render(request,'usersProfile/home.html', {'form':form,'data':data, 'key':key})
+        return render(request,'usersProfile/edit2.html', {'form':form,'data':data, 'key':key})
 
     else:
         form= ProfileForm(instance=u)
